@@ -4,34 +4,72 @@
 
 #include "SearchOptions.h"
 #include "Options.h"
+#include "Size.h"
+#include "Type.h"
+
 
 SearchOptions::SearchOptions(QStringList tokens) {
     this->tokens = tokens;
 }
 
 QString SearchOptions::toSqlQuery() {
-    QStringList sqlCommands;
+    QStringList sqlOptions = "WHERE ";
 
     QStringList commonOptions = findCommonOptions(tokens);
 
-
-
     for (const QString &token : tokens) {
         if (token == "LAST_MODIFIED") {
-            return "ORDER BY lastUpdateTime DESC";
+            return ;
         } else if (token == "CREATED") {
-            return "ORDER BY creationTime DESC";
+            return ;
         } else if (token == "MAX_SIZE") {
-            return "ORDER BY size DESC";
+            Size size(tokens.getNextToken());
+            sqlOptions += "size <= " + size.tokenToSize();
         } else if (token == "MIN_SIZE") {
-            return "ORDER BY size ASC";
+            Size size( tokens.getNextToken());
+            sqlOptions += "size >= " + size.tokenToSize();
         } else if (token == "SIZE") {
-            return "ORDER BY size";
+            QString nextToken = tokens.getnextTtoken();
+            if (nextToken == "BETWEEN") {
+                QString token1 = tokens.getnextToken();
+                QString tokenAnd = tokens.getnextToken();
+                QString token2 = tokens.getnextToken();
+                if (tokenAnd != "AND") {
+                    //trow error
+                }
+                else {
+                    Size size1(token1);
+                    Size size2(token2);
+                    sqlOptions += "size >= " + size1.tokenToSize() + " AND size <=" + size2.tokenToSize();
+                }
+            }
+            else {
+                 sqlOptions += "size >= " + tokenToSize(nextToken);
+            }
         } else if (token == "EXT") {
-            return "ORDER BY extension";
+            return ;
         } else if (token == "TYPE") {
-            return "ORDER BY extension";
+          QString tables;
+          QString nextToken = tokens.getNextToken();
+
+             if (nextToken.section(-1) == ",") {
+                 Type type(token.section(-1));
+                 sqlOptions += type.tokenToType();
+                 //recall for next token ??
+             }
+             else {
+                 Type type(token);
+                 sqlOptions += type.tokenToType();
+             }
+             while (  tokens.getNextToken() == "OR" or tokens.getNextToken().section(-1) == "," ) {
+                 // tables += "OR"
+                // get next token
+                // tokenToType(token);
         }
+        sqlOptions += " AND ";
     }
+
     return QString();
 }
+}
+

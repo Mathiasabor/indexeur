@@ -33,9 +33,13 @@ add_executable(indexeur main.cpp
         Commands/Options/Options.cpp
         Commands/Options/Options.h
         Commands/Options/SearchOptions.cpp
-        Commands/Options/SearchOptions.h)
+        Commands/Options/SearchOptions.h
+        Commands/Options/Size.cpp
+        Commands/Options/Size.h
+        Commands/Options/Type.cpp
+        Commands/Options/Type.h
+)
 target_link_libraries(indexeur
         Qt5::Core
         Qt5::Sql
 )
-
