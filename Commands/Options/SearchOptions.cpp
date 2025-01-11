@@ -61,7 +61,7 @@ QString SearchOptions::toSqlQuery() {
                  Type type(token);
                  sqlOptions += type.tokenToType();
              }
-             while (  tokens.getNextToken() == "OR" or tokens.getNextToken().section(-1) == "," ) {
+             //while (  tokens.getNextToken() == "OR" or nextToken.section(-1) == "," ) {
                  // tables += "OR"
                 // get next token
                 // tokenToType(token);
