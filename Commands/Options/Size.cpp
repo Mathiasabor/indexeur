@@ -8,7 +8,7 @@ Size::Size(QString token) {
     this->token = token;
 }
 
-QString Size::tokenToSize() {
+QString Size::sqlCommand() {
     QString unit = token.section(-1);
     int digits = token.chop(1).toInt();
     if (unit == "K") {

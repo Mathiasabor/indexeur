@@ -8,7 +8,7 @@ Type::Type(QString token) {
   this->token = token;
 }
 
-QString Type::tokenToType() {
+QString Type::sqlCommand() {
     QString txtExtensions = "'.html', '.txt', '.md', '.mdx', '.asc', '.doc', '.docx', '.pdf', '.wps', '.wpd', '.rtf', '.msg'";
     QString imgExtensions = "'.webp', '.apng', '.png', '.avif', '.gif', '.jpg', '.jpeg', '.jfif', '.pjpeg', '.pjp', '.png', '.svg'";
     QString exeExtensions = "'.exe', '.bat', '.sh'";

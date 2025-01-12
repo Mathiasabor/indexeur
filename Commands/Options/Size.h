@@ -10,8 +10,9 @@
 class Size {
 public:
     Size(QString token);
+    QString sqlCommand();
+private:
     QString token;
-    QString tokenToSize();
 };
 
 #endif //SIZE_H

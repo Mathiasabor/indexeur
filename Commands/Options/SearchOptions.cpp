@@ -12,10 +12,10 @@ SearchOptions::SearchOptions(QStringList tokens) {
     this->tokens = tokens;
 }
 
-QString SearchOptions::toSqlQuery() {
+QString SearchOptions::toSqlOptions() {
     QStringList sqlOptions = "WHERE ";
 
-    QStringList commonOptions = findCommonOptions(tokens);
+    //QStringList commonOptions = findCommonOptions(tokens);
 
     for (const QString &token : tokens) {
         if (token == "LAST_MODIFIED") {
@@ -24,10 +24,14 @@ QString SearchOptions::toSqlQuery() {
             return ;
         } else if (token == "MAX_SIZE") {
             Size size(tokens.getNextToken());
-            sqlOptions += "size <= " + size.tokenToSize();
+            if (size.sqlCommand()) {
+                sqlOptions += "size <= " + size.sqlCommand();
+            }
         } else if (token == "MIN_SIZE") {
-            Size size( tokens.getNextToken());
-            sqlOptions += "size >= " + size.tokenToSize();
+            Size size(tokens.getNextToken());
+            if (size.sqlCommand()) {
+                sqlOptions += "size >= " + size.sqlCommand();
+            }
         } else if (token == "SIZE") {
             QString nextToken = tokens.getnextTtoken();
             if (nextToken == "BETWEEN") {
@@ -40,11 +44,16 @@ QString SearchOptions::toSqlQuery() {
                 else {
                     Size size1(token1);
                     Size size2(token2);
-                    sqlOptions += "size >= " + size1.tokenToSize() + " AND size <=" + size2.tokenToSize();
+                    if (size1.sqlCommand() && size2.sqlCommand()) {
+                        sqlOptions += "size >= " + size1.sqlCommand() + " AND size <=" + size2.sqlCommand();
+                    }
                 }
             }
             else {
-                 sqlOptions += "size >= " + tokenToSize(nextToken);
+                Size size(nextToken);
+                if (size.sqlCommand()) {
+                    sqlOptions += "size >= " + size.sqlCommand();
+                }
             }
         } else if (token == "EXT") {
             return ;
@@ -54,22 +63,27 @@ QString SearchOptions::toSqlQuery() {
 
              if (nextToken.section(-1) == ",") {
                  Type type(token.section(-1));
-                 sqlOptions += type.tokenToType();
+                 if (type.sqlCommand()) {
+                     sqlOptions += type.sqlCommand();
+                 }
                  //recall for next token ??
              }
              else {
                  Type type(token);
-                 sqlOptions += type.tokenToType();
+                 if (type.sqlCommand()) {
+                     sqlOptions += type.sqlCommand();
+                 }
+
              }
              //while (  tokens.getNextToken() == "OR" or nextToken.section(-1) == "," ) {
                  // tables += "OR"
                 // get next token
-                // tokenToType(token);
+                // sqlCommand(token);
         }
         sqlOptions += " AND ";
     }
 
     return QString();
 }
-}
+
 
