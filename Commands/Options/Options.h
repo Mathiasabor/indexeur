@@ -33,11 +33,18 @@ inline QString optionToString(Options option) {
 }
 
 inline QList<QString> findCommonOptions(QList<QString> tokens) {
-    QList<QString> commonOptions;
+    QList<QStringList> commonOptions;
+    QStringList option;
+    commonOptions.append(option);
     for (const auto& TokensOption : tokens) {
         for (const auto& predefinedOption : predefinedOptions) {
             if (TokensOption == predefinedOption) {
-                commonOptions.append(TokensOption);
+                QStringList newOption;
+                commonOptions.append(newOption);
+                newOption.append(TokensOption);
+            }
+            else {
+                option.append(TokensOption);
             }
         }
     }

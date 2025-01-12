@@ -15,29 +15,36 @@ SearchOptions::SearchOptions(QStringList tokens) {
 QString SearchOptions::toSqlOptions() {
     QStringList sqlOptions = "WHERE ";
 
-    //QStringList commonOptions = findCommonOptions(tokens);
+    QList<QStringList> options = findCommonOptions(tokens);
 
-    for (const QString &token : tokens) {
-        if (token == "LAST_MODIFIED") {
-            return ;
-        } else if (token == "CREATED") {
-            return ;
-        } else if (token == "MAX_SIZE") {
-            Size size(tokens.getNextToken());
+    for (const QStringList &option : options) {
+      int index = 0;
+      while( index < option.size()) {
+        if (option[index] == "LAST_MODIFIED") {
+            //
+        } else if (option[index] == "CREATED") {
+            //
+        } else if (option[index] == "MAX_SIZE") {
+            index++;
+            Size size(option[index]);
             if (size.sqlCommand()) {
                 sqlOptions += "size <= " + size.sqlCommand();
             }
-        } else if (token == "MIN_SIZE") {
-            Size size(tokens.getNextToken());
+        } else if (option[index] == "MIN_SIZE") {
+            index++;
+            Size size(option[index]);
             if (size.sqlCommand()) {
                 sqlOptions += "size >= " + size.sqlCommand();
             }
-        } else if (token == "SIZE") {
-            QString nextToken = tokens.getnextTtoken();
-            if (nextToken == "BETWEEN") {
-                QString token1 = tokens.getnextToken();
-                QString tokenAnd = tokens.getnextToken();
-                QString token2 = tokens.getnextToken();
+        } else if (option[index] == "SIZE") {
+            index++;
+            if (option[index] == "BETWEEN") {
+                index++;
+                QString token1 = option[index];
+                index++;
+                QString tokenAnd = option[index];
+                index++;
+                QString token2 = option[index];
                 if (tokenAnd != "AND") {
                     //trow error
                 }
@@ -50,26 +57,25 @@ QString SearchOptions::toSqlOptions() {
                 }
             }
             else {
-                Size size(nextToken);
+                Size size(option[index]);
                 if (size.sqlCommand()) {
                     sqlOptions += "size >= " + size.sqlCommand();
                 }
             }
-        } else if (token == "EXT") {
+        } else if (option == "EXT") {
             return ;
-        } else if (token == "TYPE") {
-          QString tables;
-          QString nextToken = tokens.getNextToken();
-
-             if (nextToken.section(-1) == ",") {
-                 Type type(token.section(-1));
+        } else if (option == "TYPE") {
+          //QString tables;
+             index++;
+             if (option[index].section(-1) == ",") {
+                 Type type(option[index].section(-1));
                  if (type.sqlCommand()) {
                      sqlOptions += type.sqlCommand();
                  }
                  //recall for next token ??
              }
              else {
-                 Type type(token);
+                 Type type(option[index]);
                  if (type.sqlCommand()) {
                      sqlOptions += type.sqlCommand();
                  }
@@ -79,11 +85,10 @@ QString SearchOptions::toSqlOptions() {
                  // tables += "OR"
                 // get next token
                 // sqlCommand(token);
+            sqlOptions += " AND ";
         }
-        sqlOptions += " AND ";
+      }
     }
-
     return QString();
 }
-
 
