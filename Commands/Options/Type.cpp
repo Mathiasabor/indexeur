@@ -23,9 +23,9 @@ QString Type::sqlCommand() {
 }
 
 QString Type::toSqlOption(QString token) {
-    QString txtExtensions = "'.html', '.txt', '.md', '.mdx', '.asc', '.doc', '.docx', '.pdf', '.wps', '.wpd', '.rtf', '.msg'";
-    QString imgExtensions = "'.webp', '.apng', '.png', '.avif', '.gif', '.jpg', '.jpeg', '.jfif', '.pjpeg', '.pjp', '.png', '.svg'";
-    QString exeExtensions = "'.exe', '.bat', '.sh'";
+    QString txtExtensions = "'html', 'txt', 'md', 'mdx', 'asc', 'doc', 'docx', 'pdf', 'wps', 'wpd', 'rtf', 'msg'";
+    QString imgExtensions = "'webp', 'apng', 'png', 'avif', 'gif', 'jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'svg'";
+    QString exeExtensions = "'exe', 'bat', 'sh'";
 
     if (token == "image") {
         return "extension IN (" + imgExtensions + ")";
