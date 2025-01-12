@@ -63,30 +63,16 @@ QString SearchOptions::toSqlOptions() {
                 }
             }
         } else if (option == "EXT") {
-            return ;
+            //
         } else if (option == "TYPE") {
-          //QString tables;
-             index++;
-             if (option[index].section(-1) == ",") {
-                 Type type(option[index].section(-1));
-                 if (type.sqlCommand()) {
-                     sqlOptions += type.sqlCommand();
-                 }
-                 //recall for next token ??
-             }
-             else {
-                 Type type(option[index]);
-                 if (type.sqlCommand()) {
-                     sqlOptions += type.sqlCommand();
-                 }
-
-             }
-             //while (  tokens.getNextToken() == "OR" or nextToken.section(-1) == "," ) {
-                 // tables += "OR"
-                // get next token
-                // sqlCommand(token);
-            sqlOptions += " AND ";
+            index++;
+            Type type(option.mid(index));
+            if (type.sqlCommand()) {
+                sqlOptions += type.sqlCommand();
+            }
+            index = option.size();
         }
+        sqlOptions += " AND ";
       }
     }
     return QString();

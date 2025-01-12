@@ -4,11 +4,32 @@
 
 #include "Type.h"
 
-Type::Type(QString token) {
-  this->token = token;
+Type::Type(QStringList tokens) {
+  this->tokens = tokens;
 }
 
 QString Type::sqlCommand() {
+  QString sqlOptions;
+  int index = 0;
+    while (index < tokens.size()) {
+        if (tokens[index].section(-1) == ",") {
+            QString token = tokens[index].section(-1);
+            if (toSqlOption(token)) {
+                sqlOptions += toSqlOption(token);
+            }
+        }
+        else if ("OR") {
+            //do nothing
+        }
+        else if (toSqlOption(tokens[index])) {
+            sqlOptions += (toSqlOption(tokens[index]);
+        }
+        sqlOptions += " OR ";
+        index++;
+    }
+}
+
+QString Type::toSqlOption(QString token) {
     QString txtExtensions = "'.html', '.txt', '.md', '.mdx', '.asc', '.doc', '.docx', '.pdf', '.wps', '.wpd', '.rtf', '.msg'";
     QString imgExtensions = "'.webp', '.apng', '.png', '.avif', '.gif', '.jpg', '.jpeg', '.jfif', '.pjpeg', '.pjp', '.png', '.svg'";
     QString exeExtensions = "'.exe', '.bat', '.sh'";

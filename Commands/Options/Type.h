@@ -9,10 +9,10 @@
 
 class Type {
 public:
-    Type(QString token);
+    Type(QStringList tokens);
     QString sqlCommand();
 private:
-    QString token;
+    QString tokens;
 };
 
 
