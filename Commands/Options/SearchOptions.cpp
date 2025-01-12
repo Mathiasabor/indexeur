@@ -6,6 +6,12 @@
 
 #include "CreatedOption.h"
 #include "LastModifiedOption.h"
+#include "MaxSizeOption.h"
+#include "MinSizeOption.h"
+#include "SizeOption.h"
+#include "ExtOption.h"
+#include "TypeOption.h"
+#include "QDebug"
 
 SearchOptions::SearchOptions() {
 
@@ -26,15 +32,38 @@ QString SearchOptions::toSqlQuery(QStringList queries, QStringList *errorList) {
             searchQuery.append(" "+createdOption.toSql());
             return createdOption.toSql();
         } else if (querytok == "MAX_SIZE") {
-            return "ORDER BY size DESC";
+            MaxSizeOption maxSizeOption(queries);
+            maxSizeOption.buildSizeSpecOption(errorList);
+            searchQuery.append(" "+maxSizeOption.toSql());
+            return maxSizeOption.toSql();
+
+
         } else if (querytok == "MIN_SIZE") {
-            return "ORDER BY size ASC";
+            MinSizeOption minSizeOption(queries);
+            minSizeOption.buildSizeSpecOption(errorList);
+            searchQuery.append(" "+minSizeOption.toSql());
+            return minSizeOption.toSql();
+
         } else if (querytok == "SIZE") {
-            return "ORDER BY size";
+
+            SizeOption sizeOption(queries);
+            sizeOption.buildSizeSpecOption(errorList);
+            searchQuery.append(" "+sizeOption.toSql());
+            return sizeOption.toSql();
+
+
         } else if (querytok == "EXT") {
-            return "ORDER BY extension";
+            ExtOption extOption(queries);
+            extOption.buildExtSpecOption(errorList);
+            searchQuery.append(" "+extOption.toSql());
+            return extOption.toSql();
+
         } else if (querytok == "TYPE") {
-            return "ORDER BY extension";
+            TypeOption typeOption(queries);
+            typeOption.buildTypeSpecOption(errorList);
+            searchQuery.append(" "+typeOption.toSql());
+            return typeOption.toSql();
+
         }
     }
     return QString();
@@ -56,9 +85,9 @@ QString SearchOptions::getColumnName(QString option) {
     } else if (option == "CREATED") {
         return "date(creationTime)";
     } else if (option == "MAX_SIZE") {
-        return "size";
+        return "size <";
     } else if (option == "MIN_SIZE") {
-        return "size";
+        return "size >";
     } else if (option == "SIZE") {
         return "size";
     } else if (option == "EXT") {
@@ -79,4 +108,9 @@ QList<QString> SearchOptions::findCommonOptions(QList<QString> tokens) {
         }
     }
     return commonOptions;
+}
+
+void SearchOptions::appendSemicolon() {
+    searchQuery.append(";");
+
 }

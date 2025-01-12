@@ -3,12 +3,16 @@
 //
 
 #include "Tokenizer.h"
+#include <QDebug>
 Tokenizer::Tokenizer(char **input, int argsize) {
     for (int i = 0; i < argsize; i++) {
 
         if (QString(input[i]).contains(':')) {
             splitAndAddToken(QString(input[i]));
-        } else {
+        }else if(QString(input[i]).contains(',')){
+            splitAndAddToken(QString(input[i]));
+        }
+        else {
             tokens.append(QString(input[i]));
         }
 
@@ -17,8 +21,14 @@ Tokenizer::Tokenizer(char **input, int argsize) {
 }
 
 void Tokenizer::splitAndAddToken(const QString& token) {
-    QStringList splitTokens = token.split(':'); // Remplacez ':' par le caractère de votre choix
+    QStringList splitTokens = token.split(QRegExp("[:,]")); // Remplacez ':' par le caractère de votre choix
     for (const QString& splitToken : splitTokens) {
-        tokens.append(splitToken);
+
+        if(!splitToken.isEmpty()){
+
+            qDebug() << "splitToken : " << splitToken;
+            tokens.append(splitToken);
+        }
+
     }
 }

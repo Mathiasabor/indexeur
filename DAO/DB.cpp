@@ -76,3 +76,35 @@ void DB::clearTable() {
     }
 
 }
+
+void DB::executeQuery(QString query, QStringList *errorList) {
+    if (!db.open()) {
+        qDebug() << "Erreur lors de l'ouverture de la base de données ";
+        return;
+    }
+
+    QSqlQuery sqlQuery;
+    sqlQuery.prepare(query);
+
+
+
+
+    if (!sqlQuery.exec()) {
+        qDebug() << "Erreur lors de l'exécution de la requête  " << sqlQuery.lastError().text();
+        errorList->append(sqlQuery.lastError().text());
+    } else {
+        qDebug() << "Requête exécutée avec succès!";
+
+        while (sqlQuery.next()) {
+            qDebug() << "name : " << sqlQuery.value(0).toString();
+            qDebug() << "extension : " << sqlQuery.value(1).toString();
+            qDebug() << "size : " << sqlQuery.value(2).toString();
+            qDebug() << "creationTime : " << sqlQuery.value(3).toString();
+            qDebug() << "lastUpdateTime : " << sqlQuery.value(4).toString();
+            qDebug() << "parentDirectory : " << sqlQuery.value(5).toString();
+            qDebug() << "path : " << sqlQuery.value(6).toString();
+        }
+
+    }
+
+}

@@ -97,14 +97,6 @@ build CMakeFiles/indexeur.dir/Commands/CommandFactory.cpp.o: CXX_COMPILER__index
   OBJECT_DIR = CMakeFiles/indexeur.dir
   OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands
 
-build CMakeFiles/indexeur.dir/Commands/QueryingCommands/QueryingCommand.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.cpp || cmake_object_order_depends_target_indexeur
-  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
-  DEP_FILE = CMakeFiles/indexeur.dir/Commands/QueryingCommands/QueryingCommand.cpp.o.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
-  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
-  OBJECT_DIR = CMakeFiles/indexeur.dir
-  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/QueryingCommands
-
 build CMakeFiles/indexeur.dir/Commands/QueryingCommands/SearchCommand.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/QueryingCommands/SearchCommand.cpp || cmake_object_order_depends_target_indexeur
   DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
   DEP_FILE = CMakeFiles/indexeur.dir/Commands/QueryingCommands/SearchCommand.cpp.o.d
@@ -112,14 +104,6 @@ build CMakeFiles/indexeur.dir/Commands/QueryingCommands/SearchCommand.cpp.o: CXX
   INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
   OBJECT_DIR = CMakeFiles/indexeur.dir
   OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/QueryingCommands
-
-build CMakeFiles/indexeur.dir/Commands/AbstractCommand.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/AbstractCommand.cpp || cmake_object_order_depends_target_indexeur
-  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
-  DEP_FILE = CMakeFiles/indexeur.dir/Commands/AbstractCommand.cpp.o.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
-  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
-  OBJECT_DIR = CMakeFiles/indexeur.dir
-  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands
 
 build CMakeFiles/indexeur.dir/Commands/Options/SearchOptions.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/SearchOptions.cpp || cmake_object_order_depends_target_indexeur
   DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
@@ -161,6 +145,70 @@ build CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpecOption.cpp.o: CX
   OBJECT_DIR = CMakeFiles/indexeur.dir
   OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options/DateSpec
 
+build CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpec.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpec.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpec.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options/SizeSpec
+
+build CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpecOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpecOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpecOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options/SizeSpec
+
+build CMakeFiles/indexeur.dir/Commands/Options/SizeOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/SizeOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/SizeOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options
+
+build CMakeFiles/indexeur.dir/Commands/Options/MinSizeOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/MinSizeOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/MinSizeOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options
+
+build CMakeFiles/indexeur.dir/Commands/Options/MaxSizeOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/MaxSizeOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/MaxSizeOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options
+
+build CMakeFiles/indexeur.dir/Commands/Options/ExtensionSpec/ExtSpec.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/ExtensionSpec/ExtSpec.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/ExtensionSpec/ExtSpec.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options/ExtensionSpec
+
+build CMakeFiles/indexeur.dir/Commands/Options/ExtOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/ExtOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/ExtOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options
+
+build CMakeFiles/indexeur.dir/Commands/Options/TypeOption.cpp.o: CXX_COMPILER__indexeur_unscanned_Debug /home/abor/CLionProjects/indexeur/Commands/Options/TypeOption.cpp || cmake_object_order_depends_target_indexeur
+  DEFINES = -DQT_CORE_LIB -DQT_SQL_LIB
+  DEP_FILE = CMakeFiles/indexeur.dir/Commands/Options/TypeOption.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always -fPIC
+  INCLUDES = -isystem /home/abor/CLionProjects/indexeur/cmake-build-debug/indexeur_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSql
+  OBJECT_DIR = CMakeFiles/indexeur.dir
+  OBJECT_FILE_DIR = CMakeFiles/indexeur.dir/Commands/Options
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target indexeur
@@ -169,7 +217,7 @@ build CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpecOption.cpp.o: CX
 #############################################
 # Link the executable indexeur
 
-build indexeur: CXX_EXECUTABLE_LINKER__indexeur_Debug CMakeFiles/indexeur.dir/indexeur_autogen/mocs_compilation.cpp.o CMakeFiles/indexeur.dir/main.cpp.o CMakeFiles/indexeur.dir/Indexer/Indexer.cpp.o CMakeFiles/indexeur.dir/Tokenizer/Tokenizer.cpp.o CMakeFiles/indexeur.dir/DAO/DB.cpp.o CMakeFiles/indexeur.dir/Commands/CommandFactory.cpp.o CMakeFiles/indexeur.dir/Commands/QueryingCommands/QueryingCommand.cpp.o CMakeFiles/indexeur.dir/Commands/QueryingCommands/SearchCommand.cpp.o CMakeFiles/indexeur.dir/Commands/AbstractCommand.cpp.o CMakeFiles/indexeur.dir/Commands/Options/SearchOptions.cpp.o CMakeFiles/indexeur.dir/Commands/Options/CreatedOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/LastModifiedOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpec.cpp.o CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpecOption.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8 || indexeur_autogen indexeur_autogen_timestamp_deps
+build indexeur: CXX_EXECUTABLE_LINKER__indexeur_Debug CMakeFiles/indexeur.dir/indexeur_autogen/mocs_compilation.cpp.o CMakeFiles/indexeur.dir/main.cpp.o CMakeFiles/indexeur.dir/Indexer/Indexer.cpp.o CMakeFiles/indexeur.dir/Tokenizer/Tokenizer.cpp.o CMakeFiles/indexeur.dir/DAO/DB.cpp.o CMakeFiles/indexeur.dir/Commands/CommandFactory.cpp.o CMakeFiles/indexeur.dir/Commands/QueryingCommands/SearchCommand.cpp.o CMakeFiles/indexeur.dir/Commands/Options/SearchOptions.cpp.o CMakeFiles/indexeur.dir/Commands/Options/CreatedOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/LastModifiedOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpec.cpp.o CMakeFiles/indexeur.dir/Commands/Options/DateSpec/DateSpecOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpec.cpp.o CMakeFiles/indexeur.dir/Commands/Options/SizeSpec/SizeSpecOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/SizeOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/MinSizeOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/MaxSizeOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/ExtensionSpec/ExtSpec.cpp.o CMakeFiles/indexeur.dir/Commands/Options/ExtOption.cpp.o CMakeFiles/indexeur.dir/Commands/Options/TypeOption.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.8 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8 || indexeur_autogen indexeur_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Sql.so.5.15.8  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.8
   OBJECT_DIR = CMakeFiles/indexeur.dir

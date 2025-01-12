@@ -8,16 +8,19 @@
 
 #include <QString>
 #include <QStringList>
+#include "../DAO/DB.h"
 
 class CommandFactory {
 private:
-    QString Command;
+    QString Commands;
     QStringList tokens;
+    QString executedQuery;
+    DB db;
 
 public:
-    CommandFactory(QString command , QStringList tokens);
+    CommandFactory(QString command , QStringList tokens, DB db);
     void createCommand();
-    void execute(QString searchQuery); ;
+    void execute();
     QStringList *errorList;
 
 };

@@ -19,8 +19,6 @@ indexeur_autogen/timestamp: \
 	/home/abor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux.cmake \
 	/home/abor/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake \
 	/home/abor/CLionProjects/indexeur/CMakeLists.txt \
-	/home/abor/CLionProjects/indexeur/Commands/AbstractCommand.cpp \
-	/home/abor/CLionProjects/indexeur/Commands/AbstractCommand.h \
 	/home/abor/CLionProjects/indexeur/Commands/CommandFactory.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/CommandFactory.h \
 	/home/abor/CLionProjects/indexeur/Commands/Options/CreatedOption.cpp \
@@ -29,12 +27,26 @@ indexeur_autogen/timestamp: \
 	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpec.h \
 	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/ExtOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/ExtOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/ExtensionSpec/ExtSpec.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/ExtensionSpec/ExtSpec.h \
 	/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/MaxSizeOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/MaxSizeOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/MinSizeOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/MinSizeOption.h \
 	/home/abor/CLionProjects/indexeur/Commands/Options/SearchOptions.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/Options/SearchOptions.h \
-	/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.cpp \
-	/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpec.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpec.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpecOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpecOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/TypeOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/TypeOption.h \
 	/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/SearchCommand.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/SearchCommand.h \
 	/home/abor/CLionProjects/indexeur/DAO/DB.cpp \

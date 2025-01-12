@@ -15,6 +15,7 @@ public:
     DB();
     void clearTable();
     void insertDatas(QList<FilesDTO> files);
+    void executeQuery(QString query, QStringList *errorList);
 private:
     QSqlDatabase db;
     void createTable();

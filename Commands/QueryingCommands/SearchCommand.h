@@ -6,7 +6,8 @@
 #define INDEXEUR_SEARCHCOMMAND_H
 
 
-#include "QueryingCommand.h"
+#include <QString>
+#include <QStringList>
 
 class SearchCommand  {
 private:

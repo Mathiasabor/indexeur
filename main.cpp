@@ -27,22 +27,12 @@ int main(int argc, char *argv[]) {
     }
 */
 
-
-
+DB db = DB();
 Tokenizer tokenizer(argv, argc);
-    for (const QString &token : tokenizer.tokens) {
-        qDebug() << "Token : " << token;
-    }
-
-
-    QStringList tokens = SearchOptions::findCommonOptions(tokenizer.tokens);
-
-    for (const QString &token : tokens) {
-        qDebug() << "common token : " << token;
-    }
-
-    CommandFactory commandFactory(tokenizer.tokens.first(), tokenizer.tokens);
-    commandFactory.createCommand();
+QStringList tokens = SearchOptions::findCommonOptions(tokenizer.tokens);
+CommandFactory commandFactory(tokenizer.tokens.first(), tokenizer.tokens, db);
+commandFactory.createCommand();
+commandFactory.execute();
 
 
     qDebug() << "Hello World";

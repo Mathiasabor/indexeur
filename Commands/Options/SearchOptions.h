@@ -15,6 +15,7 @@ public:
     QString toSqlQuery(QStringList queries, QStringList *errorList);
     QString getSearchQuerySql();
     void appendAdd();
+    void appendSemicolon();
    static QString getColumnName(QString option);
    static QList<QString> findCommonOptions(QList<QString> tokens);
 private:

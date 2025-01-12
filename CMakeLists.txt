@@ -24,12 +24,8 @@ add_executable(indexeur main.cpp
         DAO/QueryManager.h
         Commands/CommandFactory.cpp
         Commands/CommandFactory.h
-        Commands/QueryingCommands/QueryingCommand.cpp
-        Commands/QueryingCommands/QueryingCommand.h
         Commands/QueryingCommands/SearchCommand.cpp
         Commands/QueryingCommands/SearchCommand.h
-        Commands/AbstractCommand.cpp
-        Commands/AbstractCommand.h
         Commands/Options/SearchOptions.cpp
         Commands/Options/SearchOptions.h
         Commands/Options/CreatedOption.cpp
@@ -39,7 +35,23 @@ add_executable(indexeur main.cpp
         Commands/Options/DateSpec/DateSpec.cpp
         Commands/Options/DateSpec/DateSpec.h
         Commands/Options/DateSpec/DateSpecOption.cpp
-        Commands/Options/DateSpec/DateSpecOption.h)
+        Commands/Options/DateSpec/DateSpecOption.h
+        Commands/Options/SizeSpec/SizeSpec.cpp
+        Commands/Options/SizeSpec/SizeSpec.h
+        Commands/Options/SizeSpec/SizeSpecOption.cpp
+        Commands/Options/SizeSpec/SizeSpecOption.h
+        Commands/Options/SizeOption.cpp
+        Commands/Options/SizeOption.h
+        Commands/Options/MinSizeOption.cpp
+        Commands/Options/MinSizeOption.h
+        Commands/Options/MaxSizeOption.cpp
+        Commands/Options/MaxSizeOption.h
+        Commands/Options/ExtensionSpec/ExtSpec.cpp
+        Commands/Options/ExtensionSpec/ExtSpec.h
+        Commands/Options/ExtOption.cpp
+        Commands/Options/ExtOption.h
+        Commands/Options/TypeOption.cpp
+        Commands/Options/TypeOption.h)
 target_link_libraries(indexeur
         Qt5::Core
         Qt5::Sql

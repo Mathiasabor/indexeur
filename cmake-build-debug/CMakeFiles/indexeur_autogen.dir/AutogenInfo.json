@@ -51,12 +51,6 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/AbstractCommand.h",
-			"MU",
-			"6E3QXH7VSP/moc_AbstractCommand.cpp",
-			null
-		],
-		[
 			"/home/abor/CLionProjects/indexeur/Commands/CommandFactory.h",
 			"MU",
 			"6E3QXH7VSP/moc_CommandFactory.cpp",
@@ -81,9 +75,33 @@
 			null
 		],
 		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/ExtOption.h",
+			"MU",
+			"EP3Q7ABWD5/moc_ExtOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/ExtensionSpec/ExtSpec.h",
+			"MU",
+			"OZGHVXGQA4/moc_ExtSpec.cpp",
+			null
+		],
+		[
 			"/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.h",
 			"MU",
 			"EP3Q7ABWD5/moc_LastModifiedOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/MaxSizeOption.h",
+			"MU",
+			"EP3Q7ABWD5/moc_MaxSizeOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/MinSizeOption.h",
+			"MU",
+			"EP3Q7ABWD5/moc_MinSizeOption.cpp",
 			null
 		],
 		[
@@ -93,9 +111,27 @@
 			null
 		],
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.h",
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeOption.h",
 			"MU",
-			"GEUJABA6EM/moc_QueryingCommand.cpp",
+			"EP3Q7ABWD5/moc_SizeOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpec.h",
+			"MU",
+			"57JGAPKYUA/moc_SizeSpec.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpecOption.h",
+			"MU",
+			"57JGAPKYUA/moc_SizeSpecOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/TypeOption.h",
+			"MU",
+			"EP3Q7ABWD5/moc_TypeOption.cpp",
 			null
 		],
 		[
@@ -192,11 +228,6 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/AbstractCommand.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/abor/CLionProjects/indexeur/Commands/CommandFactory.cpp",
 			"MU",
 			null
@@ -217,7 +248,27 @@
 			null
 		],
 		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/ExtOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/ExtensionSpec/ExtSpec.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/MaxSizeOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/MinSizeOption.cpp",
 			"MU",
 			null
 		],
@@ -227,7 +278,22 @@
 			null
 		],
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.cpp",
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpec.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/SizeSpec/SizeSpecOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/TypeOption.cpp",
 			"MU",
 			null
 		],
