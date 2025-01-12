@@ -18,6 +18,8 @@ SIZE,
 EXT,
 TYPE
 };
+
+
 const QList<QString> predefinedOptions = {"LAST_MODIFIED", "CREATED", "MAX_SIZE", "MIN_SIZE", "SIZE", "EXT", "TYPE"};
 inline QString optionToString(Options option) {
     switch (option) {

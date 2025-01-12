@@ -15,16 +15,15 @@ QString Type::sqlCommand() {
         if (tokens[index].section(-1) == ",") {
             QString token = tokens[index].section(-1);
             if (toSqlOption(token)) {
-                sqlOptions += toSqlOption(token);
+                sqlOptions += toSqlOption(token) + " OR ";
             }
         }
         else if ("OR") {
-            //do nothing
+            sqlOptions += " OR ";
         }
         else if (toSqlOption(tokens[index])) {
             sqlOptions += (toSqlOption(tokens[index]);
         }
-        sqlOptions += " OR ";
         index++;
     }
 }

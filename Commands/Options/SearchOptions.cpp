@@ -14,8 +14,8 @@ SearchOptions::SearchOptions(QStringList tokens) {
 
 QString SearchOptions::toSqlOptions() {
     QStringList sqlOptions = "WHERE ";
-
-    QList<QStringList> options = findCommonOptions(tokens);
+    Options options(tokens);
+    QList<QStringList> options = options.findCommonOptions();
 
     for (const QStringList &option : options) {
       int index = 0;
