@@ -63,9 +63,27 @@
 			null
 		],
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/Options/Options.h",
+			"/home/abor/CLionProjects/indexeur/Commands/Options/CreatedOption.h",
 			"MU",
-			"EP3Q7ABWD5/moc_Options.cpp",
+			"EP3Q7ABWD5/moc_CreatedOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpec.h",
+			"MU",
+			"5BZQBVTZQK/moc_DateSpec.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.h",
+			"MU",
+			"5BZQBVTZQK/moc_DateSpecOption.cpp",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.h",
+			"MU",
+			"EP3Q7ABWD5/moc_LastModifiedOption.cpp",
 			null
 		],
 		[
@@ -184,7 +202,22 @@
 			null
 		],
 		[
-			"/home/abor/CLionProjects/indexeur/Commands/Options/Options.cpp",
+			"/home/abor/CLionProjects/indexeur/Commands/Options/CreatedOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpec.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.cpp",
 			"MU",
 			null
 		],

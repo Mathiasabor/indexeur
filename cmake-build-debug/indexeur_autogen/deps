@@ -23,8 +23,14 @@ indexeur_autogen/timestamp: \
 	/home/abor/CLionProjects/indexeur/Commands/AbstractCommand.h \
 	/home/abor/CLionProjects/indexeur/Commands/CommandFactory.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/CommandFactory.h \
-	/home/abor/CLionProjects/indexeur/Commands/Options/Options.cpp \
-	/home/abor/CLionProjects/indexeur/Commands/Options/Options.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/CreatedOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/CreatedOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpec.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpec.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/DateSpec/DateSpecOption.h \
+	/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.cpp \
+	/home/abor/CLionProjects/indexeur/Commands/Options/LastModifiedOption.h \
 	/home/abor/CLionProjects/indexeur/Commands/Options/SearchOptions.cpp \
 	/home/abor/CLionProjects/indexeur/Commands/Options/SearchOptions.h \
 	/home/abor/CLionProjects/indexeur/Commands/QueryingCommands/QueryingCommand.cpp \

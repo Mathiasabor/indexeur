@@ -17,7 +17,8 @@ private:
 public:
     CommandFactory(QString command , QStringList tokens);
     void createCommand();
-    void execute() ;
+    void execute(QString searchQuery); ;
+    QStringList *errorList;
 
 };
 

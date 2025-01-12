@@ -30,10 +30,16 @@ add_executable(indexeur main.cpp
         Commands/QueryingCommands/SearchCommand.h
         Commands/AbstractCommand.cpp
         Commands/AbstractCommand.h
-        Commands/Options/Options.cpp
-        Commands/Options/Options.h
         Commands/Options/SearchOptions.cpp
-        Commands/Options/SearchOptions.h)
+        Commands/Options/SearchOptions.h
+        Commands/Options/CreatedOption.cpp
+        Commands/Options/CreatedOption.h
+        Commands/Options/LastModifiedOption.cpp
+        Commands/Options/LastModifiedOption.h
+        Commands/Options/DateSpec/DateSpec.cpp
+        Commands/Options/DateSpec/DateSpec.h
+        Commands/Options/DateSpec/DateSpecOption.cpp
+        Commands/Options/DateSpec/DateSpecOption.h)
 target_link_libraries(indexeur
         Qt5::Core
         Qt5::Sql

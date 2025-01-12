@@ -8,13 +8,17 @@
 
 #include "QueryingCommand.h"
 
-class SearchCommand : QueryingCommand {
+class SearchCommand  {
 private:
-
+    QString queryOption;
+    QString option;
+    QStringList arguments;
 public:
-    QString searchQuery = "SEARCH ";
+    QString searchQuery = "SELECT * FROM indexed_file WHERE name LIKE ";
     SearchCommand();
     QString toSql();
+    void buildOption(QString option,QStringList commonOptions, QStringList tokens);
+    QStringList getArguments();
 
 };
 

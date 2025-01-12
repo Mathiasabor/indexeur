@@ -10,10 +10,17 @@
 
 class SearchOptions {
 public:
-    SearchOptions(QStringList tokens);
-    QString toSqlQuery();
+    static inline QList<QString> predefinedOptions = {"LAST_MODIFIED", "CREATED", "MAX_SIZE", "MIN_SIZE", "SIZE", "EXT", "TYPE"};
+    SearchOptions();
+    QString toSqlQuery(QStringList queries, QStringList *errorList);
+    QString getSearchQuerySql();
+    void appendAdd();
+   static QString getColumnName(QString option);
+   static QList<QString> findCommonOptions(QList<QString> tokens);
 private:
-    QStringList tokens;
+    QString searchQuery;
+
+
 };
 
 

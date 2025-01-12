@@ -3,7 +3,9 @@
 #include <QDateTime>
 #include "Indexer/Indexer.h"
 #include "Tokenizer/Tokenizer.h"
-#include "Commands/Options/Options.h"
+
+#include "Commands/CommandFactory.h"
+#include "Commands/Options/SearchOptions.h"
 
 int main(int argc, char *argv[]) {
     QCoreApplication a(argc, argv);
@@ -25,16 +27,23 @@ int main(int argc, char *argv[]) {
     }
 */
 
+
+
 Tokenizer tokenizer(argv, argc);
     for (const QString &token : tokenizer.tokens) {
         qDebug() << "Token : " << token;
     }
 
-    QStringList tokens = findCommonOptions(tokenizer.tokens);
+
+    QStringList tokens = SearchOptions::findCommonOptions(tokenizer.tokens);
 
     for (const QString &token : tokens) {
         qDebug() << "common token : " << token;
     }
+
+    CommandFactory commandFactory(tokenizer.tokens.first(), tokenizer.tokens);
+    commandFactory.createCommand();
+
 
     qDebug() << "Hello World";
     return QCoreApplication::exec();
