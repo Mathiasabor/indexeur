@@ -12,7 +12,7 @@ QString Type::sqlCommand() {
     QString sqlOptions;
     int index = 0;
     while (index < tokens.size()) {
-        else if (tokens[index] == "OR") {
+        if (tokens[index] == "OR") {
             sqlOptions += " OR ";
         }
         else if (toSqlOption(tokens[index])) {
