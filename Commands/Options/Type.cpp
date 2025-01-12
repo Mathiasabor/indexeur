@@ -9,8 +9,8 @@ Type::Type(QStringList tokens) {
 }
 
 QString Type::sqlCommand() {
-  QString sqlOptions;
-  int index = 0;
+    QString sqlOptions;
+    int index = 0;
     while (index < tokens.size()) {
         if (tokens[index].section(-1) == ",") {
             QString token = tokens[index].section(-1);
@@ -18,7 +18,7 @@ QString Type::sqlCommand() {
                 sqlOptions += toSqlOption(token) + " OR ";
             }
         }
-        else if ("OR") {
+        else if (tokens[index] == "OR") {
             sqlOptions += " OR ";
         }
         else if (toSqlOption(tokens[index])) {
